@@ -6,23 +6,23 @@ but "(]" and "([)]" are not."""
 
 class Solution(object):
     def isValid(self, s):
-        if s=='':
+        if s == '':
             return True
-        stack=[]
-        dict={'}':'{', ']':'[',')':'('}
+        stack = []
+        dict_p = {'}': '{', ']': '[', ')': '('}
         
-        for c in s:
-            if c=='(' or c=='[' or c=='{':
-                stack.append(c)
-            elif dict[c]:
-                if len(stack)==0:
+        for p in s:
+            if p == '(' or p == '[' or p == '{':
+                stack.append(p)
+            elif dict[p]:
+                if len(stack) == 0:
                     return False
                 else:
-                    last=stack[-1]
-                    if dict[c]!=last:
+                    last = stack[-1]
+                    if dict_p[p] != last:
                         return False
                     else:
                         stack.pop()
             else:
                 return False
-        return len(stack)==0
+        return len(stack) == 0
