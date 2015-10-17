@@ -10,7 +10,7 @@ class Solution(object):
             return True
         stack = []
         dict_p = {'}': '{', ']': '[', ')': '('}
-        
+
         for p in s:
             if p == '(' or p == '[' or p == '{':
                 stack.append(p)
