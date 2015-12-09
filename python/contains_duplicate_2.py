@@ -2,7 +2,7 @@
 
 
 class Solution(object):
-    def containsNearbyDuplicate(self, nums, k):
+    def contains_duplicate(self, nums, k):
         ndict = {}
         for i, num in enumerate(nums):
             if num not in ndict:

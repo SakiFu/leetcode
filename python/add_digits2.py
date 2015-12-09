@@ -8,8 +8,6 @@ Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one
 
 class Solution(object):
     def addDigits(self, num):
-        while num >= 10:
-            num = sum([int(str(num)[i]) for i in range(len(str(num)))])
-        return num
-
-
+        if num == 0:
+            return 0
+        return 1 + (num - 1) % 9
